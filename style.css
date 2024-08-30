@@ -1,0 +1,229 @@
+    
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+    * {
+        padding: 0;
+        margin: 0;
+        font-family: "Poppins", sans-serif;
+    }
+
+
+    /* Designing button*/
+    #addInput {
+        padding: 8px 15px;
+        background-color: darkcyan;
+        color: white;
+        border-radius: 8px;
+        border: 0;
+        transition-duration: 0.3s;
+    }
+
+    .submit {
+        padding: 10px 17px;
+        margin: 0 40px 0 0;
+        background-color: #399918;
+        color: white;
+        border-radius: 8px;
+        border: 0;
+        transition-duration: 0.3s;
+    }
+
+    .inputContainer {
+        margin: 30px 0 60px 0;
+    }
+
+    #removeInput {
+        padding: 8px 15px;
+        background-color: #991818;
+        color: white;
+        border-radius: 8px;
+        border: 0;
+        transition-duration: 0.3s;
+    }
+    
+    .container {
+        width: 75%;
+        margin: 25px auto 0 auto;
+    }
+
+    .display-flex {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+       
+    }
+    .display-flex-VAT {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: flex-end;
+        margin: 30px 0 0 0;
+    }
+
+    .display-flex-bottom {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    #quantity, #units, #unitprice, #totalprice {
+        display: inline-block;
+        vertical-align: middle;
+        width: 120px;
+    }
+
+    #total_price {
+        width: 500px;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    #item_description {
+        width: 500px;
+        display: inline-block;
+        vertical-align: middle;
+    }
+ 
+    
+    label {
+        font-size: 15px;
+        font-weight: 500;
+    }
+    input[type=text] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 4px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    input[type=number] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 4px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    input[type="date"]{
+    background-color: #0080ff;
+    padding: 12px 20px;
+    font-family: "Roboto Mono",monospace;
+    color: #ffffff;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    }
+
+    ::-webkit-calendar-picker-indicator{
+        background-color: #ffffff;
+        padding: 5px;
+        cursor: pointer;
+        border-radius: 3px;
+    }
+
+
+    #addInput:hover {
+        cursor: pointer;
+        background-color: black;
+        font-size: 13.6px;
+    } 
+
+    #removeInput:hover {
+        cursor: pointer;
+        background-color: #744545;
+        font-size: 13.6px;
+    } 
+    
+
+    .submit:hover {
+        cursor: pointer;
+        background-color: darkgreen;
+        font-size: 13.6px;
+    }
+
+    .left-side {
+        width: 500px;
+    }
+
+    .right-side {
+        width: 500px;
+    }
+
+    .buttom-part {
+        display: inline-block ;
+    }
+
+
+    #inline-block-quantity, #inline-block-totalprice, #inline-block-units, #inline-block-unitprice {
+        width: 120px;
+    }
+    #inline-block-description {
+        width: 500px;
+    }
+
+    .bottom-part {
+        margin-top: 50px;
+    }
+
+    @media screen and (max-width:1655px) {
+        .display-flex-VAT {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: flex-start;
+            margin: 30px 0 0 0;
+        }
+    }
+
+
+
+/* The Modal (background) */
+    .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,100); /* Black w/ opacity */
+    }
+    
+    /* Modal Content/Box */
+    .modal-content {
+        transition-duration: 0.5s;
+        background-color: #fefefe;
+        margin: 15% auto; /* 15% from the top and centered */
+        padding: 20px;
+        border: 1px solid #888;
+        border-radius: 8px;
+        width: 78%; /* Could be more or less, depending on screen size */
+    }
+
+    .title { 
+        text-transform: uppercase;
+        font-family:"Poppins", sans-serif;
+        font-weight: 500;
+    }
+    /* The Close Button */
+    /* .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    } */
