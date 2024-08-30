@@ -57,7 +57,7 @@
                     $infoKey = $con->insert_id;
 
                     $secondStmnt = $con->prepare("INSERT INTO sales_2 (item_description, total_price, info_key) VALUES (?, ?, ?)");
-                    $secondStmnt->bind_param("sss", $itemDescription, $totalPrice,  $infoKey);
+                    $secondStmnt->bind_param("sss", $itemDescription, $totalPrice, $infoKey);
 
                     $secondStmnt->execute();
 
