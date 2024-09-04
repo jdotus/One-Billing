@@ -84,12 +84,16 @@
         display: inline-block;
         vertical-align: middle;
     }
- 
+
+    .tin {
+        padding: 7px 0 0 0;
+    }
     
     label {
         font-size: 15px;
         font-weight: 500;
     }
+
     input[type=text] {
         width: 100%;
         padding: 12px 20px;

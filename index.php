@@ -35,23 +35,24 @@
                 $invoiceNo = mysqli_real_escape_string($con, $_POST["invoice_no"]);
                 $name = mysqli_real_escape_string($con, $_POST["name"]);
                 $invoiceDate = date("Y-m-d", strtotime($_POST["invoice_date"]));
-                $description = mysqli_real_escape_string($con, $_POST["description"]);
+                
                 $address = mysqli_real_escape_string($con, $_POST["address"]);
                 $total_sales = mysqli_real_escape_string($con, $_POST["total_sales"]);
                 $vat = mysqli_real_escape_string($con, $_POST["vat"]);
                 $total = mysqli_real_escape_string($con, $_POST["total"]);
+                $tin = mysqli_real_escape_string($con, $_POST["tin"]);
 
                 $itemDescription = mysqli_real_escape_string($con,$_POST["item_description"]);
                 $totalPrice = mysqli_real_escape_string($con, $_POST["total_price"]);
             
                 // Prepare and execute SQL statement
-                $firstStmnt = $con->prepare("INSERT INTO info (si_num, sold_to, si_date, description, address, total_sale, vat, total_amount_payable) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
+                $firstStmnt = $con->prepare("INSERT INTO info (si_num, sold_to, si_date, address, total_sale, vat, total_amount_payable, tin) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
 
                 if ($firstStmnt === false) {
                     die('Prepare() failed: ' . htmlspecialchars($con->error));
                 }
 
-                $firstStmnt->bind_param("ssssssss", $invoiceNo, $name, $invoiceDate, $description, $address, $total_sales, $vat, $total);
+                $firstStmnt->bind_param("ssssssss", $invoiceNo, $name, $invoiceDate, $address, $total_sales, $vat, $total, $tin);
 
                 if($firstStmnt->execute()) {
                     $infoKey = $con->insert_id;
@@ -81,24 +82,23 @@
                     <div class="display-flex">
                         <div class="left-side">
                             <label for="invoice_no">INVOICE NO: </label>
-                            <input type="text" id="invoice_no" name="invoice_no">
+                            <input type="text" id="invoice_no" name="invoice_no" required>
                             
                             <label for="invoice_date">INVOICE. DATE: </label><br>
-                            
-                            <input type="date" id="invoice_date" name="invoice_date"  value="<?php echo date("Y-m-d");?>">
+                            <input type="date" id="invoice_date" name="invoice_date"  value="<?php echo date("Y-m-d");?>" required>
                             <br>
                             
                         </div>
                         <div class="right-side">
 
                             <label for="name">NAME: </label>
-                            <input type="text" id="name" name="name">
+                            <input type="text" id="name" name="name" required>
                             
                             <label for="address">ADDRESS: </label>
-                            <input type="text" id="address" name="address">
+                            <input type="text" id="address" name="address" required>
                             
-                            <label for="description">DESCRIPTIONS: </label>   
-                            <input type="text" id="description" name="description">
+                            <label class="tin" for="tin">T.I.N: </label>
+                            <input type="text" id="tin" name="tin" required accept="">
                             
                         </div>
                     </div>
@@ -108,14 +108,14 @@
                         <div id="inline-block-description">
                             <label class="item_description" for="item_description">ITEM DESCRIPTION: </label>
                             
-                            <input class="item_description" type="text" id="item_description" name='item_description'>
+                            <input class="item_description" type="text" id="item_description" name='item_description' required>
                             
                         </div>
 
                         <div id="inline-block-description">
                             <label class="total_price" for="total_price">TOTAL PRICE: </label>
                             
-                            <input class="total_price" type="text" id="total_price" name='total_price'>
+                            <input class="total_price" type="text" id="total_price" name='total_price' required>
                             
                         </div>
                        
