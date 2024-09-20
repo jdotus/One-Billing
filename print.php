@@ -45,12 +45,12 @@ while($row = mysqli_fetch_array($infoResult)) {
 }
 
     // LABEL
-    $pdf->Cell(18.288, 5.461,"QUANTITY: ",0,0,'C'); 
-    $pdf->Cell(12.7, 5.461,'UNITS',0,0,'C');  
-    $pdf->Cell(88.773, 5.461,"ITEM DESCRIPTION: ",0,0,'C'); 
+    $pdf->Cell(18.288, 5.461,"",0,0,'C'); 
+    $pdf->Cell(12.7, 5.461,'',0,0,'C');  
+    $pdf->Cell(88.773, 5.461,"",0,0,'C'); 
 
-    $pdf->Cell(30.496, 5.461,"UNIT PRICE ",0,0,'C');
-    $pdf->Cell(33.671, 5.461,"TOTAL PRICE: ",0,1,'C');
+    $pdf->Cell(30.496, 5.461,"",0,0,'C');
+    $pdf->Cell(33.671, 5.461,"",0,1,'C');
     
     $pdf->Cell(18.288, 6.35,'' ,0,0,'C'); 
     $pdf->Cell(12.7, 6.35,'',0,0,'C');  
@@ -120,40 +120,40 @@ $pdf->Cell(33.671, 6.35,'',0,1);
 $pdf->Cell(18.288, 6.35,' ',0,0); 
 $pdf->Cell(12.7, 6.35,' ',0,0);  
 $pdf->Cell(88.773, 6.35,' ',0,0);
-$pdf->Cell(30.496, 6.35,'VATable Sale',0,0);
+$pdf->Cell(30.496, 6.35,'',0,0);
 $pdf->Cell(33.671, 6.35,'',0,1);
 // $pdf->Cell(33.671, 6.35,$row["vatable_sale"],1,1);
 
 $pdf->Cell(18.288, 6.35,' ',0,0); 
 $pdf->Cell(12.7, 6.35,' ',0,0);  
 $pdf->Cell(88.773, 6.35,' ',0,0);
-$pdf->Cell(30.496, 6.35,'VAT Exempt Sale',0,0);
+$pdf->Cell(30.496, 6.35,'',0,0);
 $pdf->Cell(33.671, 6.35,'',0,1);
 // $pdf->Cell(33.671, 6.35,$row["vat_exempt_sale"],1,1);
 
 $pdf->Cell(18.288, 6.35,' ',0,0); 
 $pdf->Cell(12.7, 6.35,' ',0,0);  
 $pdf->Cell(88.773, 6.35,' ',0,0);
-$pdf->Cell(30.496, 6.35,'Zero Rated Sale',0,0);
+$pdf->Cell(30.496, 6.35,'',0,0);
 $pdf->Cell(33.671, 6.35,'',0,1);
 // $pdf->Cell(33.671, 6.35,$row["zero_rated_sale"],1,1);
 
 $pdf->Cell(18.288, 6.35,' ',0,0); 
 $pdf->Cell(12.7, 6.35,' ',0,0);  
 $pdf->Cell(88.773, 6.35,' ',0,0);
-$pdf->Cell(30.496, 6.35,'Total Sale',0,0);
+$pdf->Cell(30.496, 6.35,'',0,0);
 $pdf->Cell(33.671, 6.35,$row["total_sale"],0,1,'C');
 
 $pdf->Cell(18.288, 6.35,' ',0,0); 
 $pdf->Cell(12.7, 6.35,' ',0,0);  
 $pdf->Cell(88.773, 6.35,' ',0,0);
-$pdf->Cell(30.496, 6.35,'VAT',0,0);
+$pdf->Cell(30.496, 6.35,'',0,0);
 $pdf->Cell(33.671, 6.35,$row["vat"],0,1,'C');
 
 $pdf->Cell(18.288, 6.35,' ',0,0); 
 $pdf->Cell(12.7, 6.35,' ',0,0);  
 $pdf->Cell(88.773, 6.35,' ',0,0);
-$pdf->Cell(30.496, 6.35,'Total Amount Payable',0,0);
+$pdf->Cell(30.496, 6.35,'',0,0);
 $pdf->Cell(33.671, 6.35,$row["total_amount_payable"],0,1,'C');
 
     
